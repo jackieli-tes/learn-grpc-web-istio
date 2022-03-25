@@ -18,7 +18,6 @@ Goal: use one https port to proxy https, grpc and grpc-web
 
 
 ```
-
 istioctl proxy-config listeners istio-ingressgateway-76b86f6b45-kk4wj.istio-system
 istioctl proxy-config cluster istio-ingressgateway-76b86f6b45-kk4wj --subset hello-grpc.default.svc.cluster.local -o yaml | nvim
 
