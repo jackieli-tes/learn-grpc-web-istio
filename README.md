@@ -2,6 +2,8 @@
 
 learn grpc exposed via Istio using grpc & grpc-web
 
+Goal: use one https port to proxy https, grpc and grpc-web
+
 ## Usage
 
 1. `kind create cluster --name istio-testing`
