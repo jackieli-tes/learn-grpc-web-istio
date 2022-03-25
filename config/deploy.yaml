@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-grpc
+  labels:
+    app: hello-grpc
+spec:
+  selector:
+    matchLabels:
+      app: hello-grpc
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-grpc
+    spec:
+      containers:
+      - name: my-app
+        image: ko://github.com/jackieli-tes/learn-grpc
