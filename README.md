@@ -6,6 +6,8 @@ Goal: use one https port to proxy https, grpc and grpc-web
 
 ## Usage
 
+generate proto related files using `buf generate`
+
 1. `kind create cluster --name istio-testing`
 2. `istioctl install --set profile=demo -y`
 5. `kubectl -n istio-system create secret tls meera-tech-manual --cert ~/.ssh/meera.tech/fullchain.pem --key ~/.ssh/meera.tech/privkey.pem`

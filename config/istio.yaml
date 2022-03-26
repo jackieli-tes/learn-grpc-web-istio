@@ -9,9 +9,8 @@ spec:
     app: hello-grpc
   type: LoadBalancer
   ports:
-    - name: grpc-web-hello-grpc
+    - name: grpc
       port: 12345
-
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -31,7 +30,7 @@ spec:
               number: 12345
       match:
         - uri:
-            prefix: /main
+            prefix: /main.HelloService/
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
